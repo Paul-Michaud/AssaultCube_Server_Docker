@@ -1,5 +1,7 @@
 # Assault cube server dockerized
 
+/!\ Tested on LAN only for the moment /!\
+
 ## Edit your config
 Edit files in the config folder.
 
@@ -9,8 +11,10 @@ You can also keep the default setting and mount your config folder at runtime.
 
 Default (Build release_1.3)
 ```
-$ docker build -t ac_server:release_1.3 .
+docker build -t ac_server:release_1.3 .
 ```
+
+Delete cache between 2 builds with different $AC_RELEASE (`docker system prune`)
 
 With custom version
 ```

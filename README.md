@@ -25,10 +25,10 @@ docker build -t ac_server:master --build-arg AC_RELEASE=master .
 
 With default config 
 ```
-docker run -d ac_server:release_1.3
+docker run -d --expose 28763 -p 54.37.226.156:28763:28763/udp --expose 28762 -p 54.37.226.156:28762:28762/udp --expose 28764 -p 54.37.226.156:28764:28764/udp ac_server:release_1.3 
 ```
 
 With custom config, edit `src="$(pwd)/config"` if needed.
 ```
-docker run -d --mount src="$(pwd)/config",target=/AC/config,type=bind ac_server:release_1.3
+docker run -d --mount src="$(pwd)/config",target=/AC/config,type=bind --expose 28763 -p 54.37.226.156:28763:28763/udp --expose 28762 -p 54.37.226.156:28762:28762/udp --expose 28764 -p 54.37.226.156:28764:28764/udp ac_server:release_1.3
 ```

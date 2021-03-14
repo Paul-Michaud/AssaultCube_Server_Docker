@@ -15,7 +15,9 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && \
 
 WORKDIR /AC/source/src
 
-RUN make server_install
+# Hitreg fix
+RUN sed -i -e '42d' serverevents.h && \
+   make server_install
 
 FROM ubuntu:latest
 

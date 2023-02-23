@@ -1,7 +1,7 @@
 FROM ubuntu:latest AS build
 
 ARG AC_RELEASE
-ENV AC_RELEASE=${AC_RELEASE:-release_1.3}
+ENV AC_RELEASE=${AC_RELEASE:-v1.3.0.2}
 
 ARG TZ
 ENV TZ=${TZ:-Europe/Paris}

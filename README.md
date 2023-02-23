@@ -1,7 +1,5 @@
 # Assault cube server dockerized
 
-/!\ Tested on LAN only for the moment /!\
-
 ## Edit your config
 Edit files in the config folder.
 
